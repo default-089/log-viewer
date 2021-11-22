@@ -29,5 +29,6 @@
                 "Encore\\Admin\\LogViewer\\LogViewerServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
