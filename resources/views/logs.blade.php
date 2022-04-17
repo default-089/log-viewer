@@ -67,6 +67,13 @@
                 $.admin.addIntervalId(refreshIntervalId, false);
             }
         });
+        
+        $('.log-remove').click(function() {
+            if (confirm('Remove this log file?')) {
+                console.warn('is danger method!');
+                // location.href = "{{ route('log-viewer-index') }}";
+            }
+        });
     });
 
 
@@ -79,6 +86,7 @@
             <div class="box-header with-border">
                 <button type="button" class="btn btn-primary btn-sm log-refresh"><i class="fa fa-refresh"></i> {{ trans('admin.refresh') }}</button>
                 <button type="button" class="btn btn-default btn-sm log-live"><i class="fa fa-play"></i> </button>
+                <button type="button" class="btn btn-default btn-sm log-remove"><i class="fa fa-trash"></i> </button>
                 <div class="pull-right">
                     <div class="btn-group">
                         @if ($prevUrl)
